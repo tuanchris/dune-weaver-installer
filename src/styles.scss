@@ -1,3 +1,14 @@
+// === Dune Weaver brand theme ===
+// Palette derived from the dune-weaver-website Tailwind theme (dark sand/amber).
+
+// Brand Sass overrides (must precede the Bootstrap import)
+$primary: #b8906a; // sand-500 (primary-light)
+$dark: #1c1c1c; // brand background / navbar
+$body-bg-dark: #1c1c1c;
+$body-color-dark: #e3e3e3;
+$link-color-dark: #d09a5e;
+$link-hover-color-dark: #e6b576;
+
 @import "~bootstrap/scss/bootstrap";
 
 .container {
@@ -6,6 +17,37 @@
 
 body {
     padding-bottom: 80px;
+}
+
+// Dark surfaces tuned to the brand (warm, sand-tinted charcoals)
+[data-bs-theme="dark"] {
+    --bs-body-bg: #1c1c1c;
+    --bs-body-color: #e3e3e3;
+    --bs-secondary-bg: #2a2622;
+    --bs-tertiary-bg: #242019;
+    --bs-border-color: #4a443c;
+    --bs-border-color-translucent: rgba(245, 236, 224, 0.12);
+    --bs-emphasis-color: #f5ece0;
+    --bs-heading-color: #f5ece0;
+
+    .card {
+        --bs-card-bg: #2a2622;
+        --bs-card-cap-bg: #322c25;
+        --bs-card-border-color: #3a352e;
+    }
+    .modal {
+        --bs-modal-bg: #221f1a;
+        --bs-modal-border-color: #3a352e;
+    }
+    .dropdown-menu {
+        --bs-dropdown-bg: #2a2622;
+        --bs-dropdown-border-color: #3a352e;
+        --bs-dropdown-link-hover-bg: #353029;
+    }
+    .list-group {
+        --bs-list-group-bg: #2a2622;
+        --bs-list-group-border-color: #3a352e;
+    }
 }
 
 @include media-breakpoint-between(sm, lg) {

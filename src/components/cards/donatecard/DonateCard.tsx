@@ -9,7 +9,7 @@ const DonateCard = () => {
     const { t } = useTranslation();
 
     return (
-        <Card style={{ backgroundColor: "#f0f0f0" }}>
+        <Card style={{ backgroundColor: "var(--bs-secondary-bg)" }}>
             <Card.Body>
                 <p className="small">{t("card.donate.description")}</p>
 

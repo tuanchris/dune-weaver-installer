@@ -84,7 +84,7 @@ const Header = () => {
                             <img
                                 src={logoUrl.toString()}
                                 alt="Dune Weaver logo"
-                                width={100}
+                                width={150}
                             />
                         )}
                     </Navbar.Brand>

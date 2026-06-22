@@ -10,7 +10,12 @@ type Props = {
 const CollapseSection = ({ show, children }: Props) => {
     return (
         show && (
-            <Card style={{ padding: "16px", backgroundColor: "#eee" }}>
+            <Card
+                style={{
+                    padding: "16px",
+                    backgroundColor: "var(--bs-secondary-bg)"
+                }}
+            >
                 {children}
             </Card>
         )

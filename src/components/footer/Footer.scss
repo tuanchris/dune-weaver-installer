@@ -1,5 +1,5 @@
 .footer {
-    background-color: rgb(var(--bs-light-rgb));
+    background-color: var(--bs-tertiary-bg);
     border-top: 1px solid var(--bs-border-color-translucent);
     padding: 0 0 16px 10px;
     font-size: 16px;
@@ -21,7 +21,7 @@
     }
 
     a {
-        color: gray;
+        color: var(--bs-secondary-color);
         text-decoration: none;
         display: inline-flex;
         align-items: center;

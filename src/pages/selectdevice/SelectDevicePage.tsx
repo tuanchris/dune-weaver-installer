@@ -14,7 +14,7 @@ const SelectDevicePage = () => {
             <Row>
                 <Col>
                     <Card>
-                        <Card.Img variant="top" src="images/fluidnc6x.jpg" />
+                        <Card.Img variant="top" src="images/dune-weaver.jpg" />
                         <Card.Body style={{ textAlign: "center" }}>
                             <Card.Title>
                                 <img
