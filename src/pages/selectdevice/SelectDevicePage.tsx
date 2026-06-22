@@ -19,7 +19,7 @@ const SelectDevicePage = () => {
                             <Card.Title>
                                 <img
                                     src={logoUrl.toString()}
-                                    alt="FluidNC"
+                                    alt="Dune Weaver"
                                     width={200}
                                 />
                             </Card.Title>
@@ -30,29 +30,6 @@ const SelectDevicePage = () => {
                             <Button
                                 variant="primary"
                                 onClick={() => navigate(Page.FLUIDNC_HOME)}
-                            >
-                                {t("page.select-device.continue")}
-                            </Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <Card.Img variant="top" src="images/fluiddialhw.png" />
-                        <Card.Body style={{ textAlign: "center" }}>
-                            <Card.Title>
-                                <img
-                                    src={"/images/fluiddial.png"}
-                                    alt="FluidDial"
-                                    width={200}
-                                />
-                            </Card.Title>
-                            <Card.Text>
-                                {t("page.select-device.fluiddial")}
-                            </Card.Text>
-                            <Button
-                                variant="primary"
-                                onClick={() => navigate(Page.FLUID_DIAL_HOME)}
                             >
                                 {t("page.select-device.continue")}
                             </Button>

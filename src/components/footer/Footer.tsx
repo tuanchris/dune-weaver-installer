@@ -40,27 +40,27 @@ const Footer = () => {
                 </li>
                 <li className="me-3">
                     <a
-                        href="https://github.com/bdring/FluidNC"
+                        href="https://github.com/tuanchris/dune-weaver-firmware"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <FontAwesomeIcon icon={faGithub as IconDefinition} />{" "}
-                        FluidNC
+                        Firmware
                     </a>
                 </li>
                 <li className="me-3">
                     <a
-                        href="https://github.com/bdring/FluidDial"
+                        href="https://github.com/tuanchris/dune-weaver"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <FontAwesomeIcon icon={faGithub as IconDefinition} />{" "}
-                        FluidDial
+                        Dune Weaver
                     </a>
                 </li>
                 <li className="me-3">
                     <a
-                        href="https://github.com/breiler/fluid-installer"
+                        href="https://github.com/tuanchris/dune-weaver-installer"
                         target="_blank"
                         rel="noreferrer"
                     >

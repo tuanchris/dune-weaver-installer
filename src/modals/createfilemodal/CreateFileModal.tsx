@@ -132,7 +132,7 @@ const CreateFileModal = ({
                                             To modify or adding new templates,
                                             visit this{" "}
                                             <a
-                                                href="https://github.com/bdring/fluidnc-config-files"
+                                                href="https://github.com/tuanchris/dune-weaver-firmware-config-files"
                                                 target="_blank"
                                                 rel="noreferrer"
                                             >

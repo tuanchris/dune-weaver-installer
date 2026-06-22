@@ -124,7 +124,7 @@ const StackTraceDecoder = () => {
         setIsLoadingReleases(true);
         try {
             const resp = await fetch(
-                "https://api.github.com/repos/bdring/FluidNC/releases?per_page=30"
+                "https://api.github.com/repos/tuanchris/dune-weaver-firmware/releases?per_page=30"
             );
             if (!resp.ok) {
                 throw new Error(`HTTP ${resp.status}`);
@@ -141,12 +141,6 @@ const StackTraceDecoder = () => {
         }
     };
 
-    // Variant configuration
-    const variantInfo = (variant: string) => {
-        const [mcu, build] = variant.split("-");
-        return { mcu, build };
-    };
-
     // Load addrinfo from GitHub release
     const loadFromRelease = async () => {
         if (!selectedRelease) {
@@ -154,8 +148,9 @@ const StackTraceDecoder = () => {
             return;
         }
 
-        const vi = variantInfo(selectedVariant);
-        const url = `https://raw.githubusercontent.com/bdring/fluidnc-releases/main/releases/${selectedRelease}/${vi.mcu}/${vi.build}/firmware.addrinfo`;
+        // Served from the firmware repo's CORS-enabled raw host, alongside the
+        // firmware binaries, addressed by release tag.
+        const url = `https://raw.githubusercontent.com/tuanchris/dune-weaver-firmware/main/releases/${selectedRelease}/firmware.addrinfo`;
 
         showStatus(
             `Downloading firmware.addrinfo for ${selectedRelease} / ${selectedVariant}…`,

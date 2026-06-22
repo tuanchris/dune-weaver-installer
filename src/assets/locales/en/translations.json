@@ -8,13 +8,12 @@
     },
     "page": {
         "select-device": {
-            "fluidnc": "Use this option if you want to install, upgrade or configure your FluidNC controller.",
-            "fluiddial": "Use this option if you want to install or upgrade your FluidDial (CYD or M5Dial) pendant.",
+            "fluidnc": "Use this option if you want to install, upgrade or configure your Dune Weaver sand table controller.",
             "continue": "Continue"
         },
         "connection": {
-            "title": "FluidNC Web Installer",
-            "description": "This tool will make it easy to install or upgrade FluidNC on your controller. Plug in your controller and press Connect to continue.",
+            "title": "Dune Weaver Installer",
+            "description": "This tool will make it easy to install or upgrade the Dune Weaver firmware on your controller. Plug in your controller and press Connect to continue.",
             "connect": "Connect",
             "connecting": "Connecting",
             "establishing-connection": "Establishing connection to controller"
@@ -59,12 +58,6 @@
         "not-found": {
             "title": "Page not found",
             "go-back-home": "Return back home"
-        },
-        "fluiddial": {
-            "connection": {
-                "title": "FluidDial Web Installer",
-                "description": "This tool will make it easy to install or upgrade FluidDial on your pendant. Plug in your pendant and press Connect to continue."
-            }
         }
     },
     "panel": {
@@ -142,10 +135,10 @@
     },
     "card": {
         "install": {
-            "upgrade-description": "Upgrade FluidNC from",
-            "install-description": "The controller does not seem to have FluidNC installed, do you wish to install it?",
-            "upgrade-button": "Upgrade FluidNC",
-            "install-button": "Install FluidNC"
+            "upgrade-description": "Upgrade Dune Weaver firmware from",
+            "install-description": "The controller does not seem to have the Dune Weaver firmware installed, do you wish to install it?",
+            "upgrade-button": "Upgrade firmware",
+            "install-button": "Install firmware"
         },
         "terminal": {
             "open-terminal": "Open terminal",
@@ -170,7 +163,7 @@
             "description": "Decode ESP32 stack traces using .addrinfo files"
         },
         "donate": {
-            "description": "Please consider a donation to the FluidNC project via the links below to keep it going."
+            "description": "Please consider a donation to the Dune Weaver project via the links below to keep it going."
         }
     }
 }

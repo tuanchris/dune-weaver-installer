@@ -83,14 +83,7 @@ const Header = () => {
                             location.pathname == "/") && (
                             <img
                                 src={logoUrl.toString()}
-                                alt="FluidNC logo"
-                                width={100}
-                            />
-                        )}
-                        {location.pathname.startsWith("/fluiddial") && (
-                            <img
-                                src={"/images/fluiddial.png"}
-                                alt="FluidDial logo"
+                                alt="Dune Weaver logo"
                                 width={100}
                             />
                         )}
@@ -102,10 +95,7 @@ const Header = () => {
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item as={Link} to={Page.FLUIDNC_HOME}>
-                    FluidNC
-                </Dropdown.Item>
-                <Dropdown.Item as={Link} to={Page.FLUID_DIAL_HOME}>
-                    FluidDial
+                    Dune Weaver
                 </Dropdown.Item>
             </NavDropdown>
 

@@ -15,8 +15,6 @@ import Unsupported from "./panels/unsupported/Unsupported";
 import MatomoTracker from "./components/matomotracker/MatomoTracker";
 import FluidNCOutlet from "./outlets/FluidNCOutlet";
 import SelectDevicePage from "./pages/selectdevice/SelectDevicePage";
-import FluidDialOutlet from "./outlets/FluidDialOutlet";
-import FluidDialHomePage from "./pages/fluiddial/home/HomePage";
 import Installer from "./pages/fluidnc/installer";
 import Terminal from "./pages/fluidnc/terminal";
 import StackTraceDecoder from "./pages/fluidnc/stacktracedecoder";
@@ -57,9 +55,6 @@ const Root = () => {
                     path={Page.FLUIDNC_STACKTRACE_DECODER}
                     element={<StackTraceDecoder />}
                 />
-            </Route>
-            <Route path={Page.FLUID_DIAL_HOME} element={<FluidDialOutlet />}>
-                <Route index element={<FluidDialHomePage />} />
             </Route>
             <Route
                 path={Page.FLUIDNC_CONFIG_VALIDATION}

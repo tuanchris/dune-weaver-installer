@@ -1,15 +1,39 @@
-# FluidNC Web Installer
+# Dune Weaver Installer
 
-[![Last commit](https://img.shields.io/github/last-commit/breiler/fluid-installer.svg?maxAge=1800)](https://github.com/breiler/fluid-installer) [![Crowdin](https://badges.crowdin.net/fluid-installer/localized.svg)](https://crowdin.com/project/fluid-installer)
+A web based tool to install and configure the
+[Dune Weaver firmware](https://github.com/tuanchris/dune-weaver-firmware) — a fork of
+[FluidNC](https://github.com/bdring/FluidNC) for the
+[Dune Weaver](https://github.com/tuanchris/dune-weaver) kinetic sand table. It is a fork
+of [breiler/fluid-installer](https://github.com/breiler/fluid-installer).
 
-The FluidNC Web Installer is a web based tool to install and configure the firmware.
+The installer flashes firmware over WebSerial and lets you manage the controller's
+config, files and WiFi from the browser.
 
-![FluidNC Web Installer](https://github.com/breiler/fluid-installer/raw/master/pictures/screenshot.png "UGS Splash Image")
+## Where it gets the firmware
 
+Both sources live in the firmware repo `tuanchris/dune-weaver-firmware`
+(configured in `src/services/GitHubService.ts`):
+
+- **Release list** — the GitHub Releases API. The dropdown shows each release's
+  name; the binaries are addressed by its **tag** (`tag_name`).
+- **`manifest.json` + firmware binaries** — committed in the firmware repo under
+  `releases/<tag>/` on `main`, served via `raw.githubusercontent.com`.
+
+> **Why committed files and not GitHub release assets?** The browser fetches these
+> files cross-origin, so the host must send CORS headers. `raw.githubusercontent.com`
+> does (`access-control-allow-origin: *`); GitHub **release-asset** downloads do
+> **not**, so attaching the binaries to a GitHub Release is not enough on its own.
+
+For a release to be installable, `releases/<tag>/` must contain an
+installer-compatible `manifest.json` (its `images[].path` values are flat
+filenames) plus the matching `*.bin` files. The firmware's `build-release.py`
+already emits exactly this layout in `release/current/`.
+
+Optional config templates are read from `tuanchris/dune-weaver-firmware-config-files`
+(structured as `contributed/<board>/*.yaml`); until that repo exists the template
+picker is simply empty.
 
 ## Building
-
-Build a distribution using the following commands:
 
 ```
 npm install
@@ -17,7 +41,8 @@ npm run build
 ```
 
 ## Developing
-Start a development server using the following commands then open your browser to http://localhost:1234/
+
+Start a development server, then open http://localhost:1234/
 
 ```
 # Remove build cache
@@ -26,6 +51,3 @@ rm -r .parcel-cache
 npm install
 npm start
 ```
-
-## Localization
-You can help translating the application by creating an account on https://crowdin.com/project/fluid-installer and start translating. If there is a language missing make a request and I will add it!

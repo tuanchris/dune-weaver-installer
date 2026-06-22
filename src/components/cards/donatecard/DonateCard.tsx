@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faCcPaypal, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Card } from "react-bootstrap";
@@ -15,20 +15,7 @@ const DonateCard = () => {
 
                 <div className="d-flex justify-content-center">
                     <a
-                        href="https://www.paypal.com/donate/?hosted_button_id=8DYLB6ZYYDG7Y"
-                        target="_blank"
-                        style={{ marginRight: 18 }}
-                        rel="noreferrer"
-                    >
-                        <FontAwesomeIcon
-                            icon={faCcPaypal as IconDefinition}
-                            size="3x"
-                            style={{ color: "#123984" }}
-                        />
-                    </a>
-
-                    <a
-                        href="https://github.com/sponsors/bdring"
+                        href="https://github.com/sponsors/tuanchris"
                         target="_blank"
                         rel="noreferrer"
                     >
