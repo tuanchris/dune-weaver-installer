@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Header } from "./components";
 import Page from "./model/Page";
@@ -30,14 +30,10 @@ const Root = () => {
 
     return (
         <Routes>
-            <Route
-                index
-                element={<Navigate to={Page.FLUIDNC_HOME} replace />}
-            />
             <Route path={Page.FLUIDNC_HOME} element={<FluidNCOutlet />}>
                 <Route index element={<Home />} />
                 <Route
-                    path={Page.FLUIDNC_INSTALLER}
+                    path="install"
                     element={
                         <Installer
                             onClose={() => navigate(Page.FLUIDNC_HOME)}
@@ -45,13 +41,10 @@ const Root = () => {
                         />
                     }
                 />
-                <Route path={Page.FLUIDNC_TERMINAL} element={<Terminal />} />
-                <Route
-                    path={Page.FLUIDNC_FILEBROWSER}
-                    element={<FileBrowser />}
-                />
-                <Route path={Page.FLUIDNC_WIFI} element={<WiFiSettings />} />
-                <Route path={Page.FLUIDNC_CALIBRATE} element={<Calibrate />} />
+                <Route path="terminal" element={<Terminal />} />
+                <Route path="files" element={<FileBrowser />} />
+                <Route path="wifi" element={<WiFiSettings />} />
+                <Route path="calibrate" element={<Calibrate />} />
             </Route>
             <Route
                 path={Page.FLUIDNC_CONFIG_VALIDATION}

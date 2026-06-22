@@ -22,7 +22,9 @@ const NotFoundPage = () => {
                 <PageTitle>{t("page.not-found.title")}</PageTitle>
             </div>
             <div className="d-flex justify-content-center">
-                <Link to={Page.HOME}>{t("page.not-found.go-back-home")}</Link>
+                <Link to={Page.FLUIDNC_HOME}>
+                    {t("page.not-found.go-back-home")}
+                </Link>
             </div>
         </div>
     );

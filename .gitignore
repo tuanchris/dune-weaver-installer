@@ -3,3 +3,7 @@ dist
 .parcel-cache
 *.css.d.ts
 .idea
+
+# local verify build dirs
+dcv
+.pcv

@@ -1,12 +1,11 @@
 export enum Page {
-    HOME = "/",
-    FLUIDNC_HOME = "/fluidnc",
-    FLUIDNC_TERMINAL = "/fluidnc/terminal",
-    FLUIDNC_INSTALLER = "/fluidnc/install",
-    FLUIDNC_FILEBROWSER = "/fluidnc/files",
-    FLUIDNC_CONFIGURATION = "/fluidnc/configuration",
-    FLUIDNC_WIFI = "/fluidnc/wifi",
-    FLUIDNC_CALIBRATE = "/fluidnc/calibrate",
+    FLUIDNC_HOME = "/",
+    FLUIDNC_TERMINAL = "/terminal",
+    FLUIDNC_INSTALLER = "/install",
+    FLUIDNC_FILEBROWSER = "/files",
+    FLUIDNC_CONFIGURATION = "/configuration",
+    FLUIDNC_WIFI = "/wifi",
+    FLUIDNC_CALIBRATE = "/calibrate",
     FLUIDNC_CONFIG_VALIDATION = "/config"
 }
 

@@ -5,14 +5,13 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { Dropdown, Nav, NavDropdown, Navbar } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Page from "../../model/Page";
 
 const logoUrl = new URL("../../assets/logo.svg", import.meta.url);
 
 const Header = () => {
     const { t } = useTranslation();
-    const location = useLocation();
     return (
         <Navbar
             expand="sm"
@@ -25,14 +24,11 @@ const Header = () => {
                 className="left"
                 title={
                     <Navbar.Brand>
-                        {(location.pathname.startsWith("/fluidnc") ||
-                            location.pathname == "/") && (
-                            <img
-                                src={logoUrl.toString()}
-                                alt="Dune Weaver logo"
-                                width={150}
-                            />
-                        )}
+                        <img
+                            src={logoUrl.toString()}
+                            alt="Dune Weaver logo"
+                            width={150}
+                        />
                     </Navbar.Brand>
                 }
             >
