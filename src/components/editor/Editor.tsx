@@ -65,6 +65,7 @@ const Editor = ({ value, onChange, format }: Props) => {
         <>
             <ReactCodeMirror
                 minHeight="300px"
+                theme="dark"
                 value={value}
                 onChange={onChange}
                 extensions={extensions}
