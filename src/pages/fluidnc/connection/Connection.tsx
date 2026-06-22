@@ -11,13 +11,15 @@ import ControllerLog from "../../../components/controllerlog/ControllerLog";
 import { Col, Container, Modal, Row, Button } from "react-bootstrap";
 import LatestVersionCard from "../../../components/cards/latestversioncard/LatestVersionCard";
 import { useTranslation } from "react-i18next";
-import DonateCard from "../../../components/cards/donatecard/DonateCard";
 import useTrackEvent, {
     TrackAction,
     TrackCategory
 } from "../../../hooks/useTrackEvent";
 
-const connectImageUrl = new URL("../../../assets/connect.svg", import.meta.url);
+const connectImageUrl = new URL(
+    "../../../assets/dune-weaver.jpg",
+    import.meta.url
+);
 
 type Props = {
     onConnect: (
@@ -98,7 +100,11 @@ const Connection = ({ onConnect }: Props) => {
                                     <img
                                         className="image"
                                         src={connectImageUrl.toString()}
-                                        alt="Connect"
+                                        alt="Dune Weaver sand table"
+                                        style={{
+                                            maxWidth: "100%",
+                                            borderRadius: "12px"
+                                        }}
                                     />
                                 </div>
                             </>
@@ -170,7 +176,6 @@ const Connection = ({ onConnect }: Props) => {
                 </Col>
                 <Col xs={12} sm={12} md={5} lg={5}>
                     <LatestVersionCard />
-                    <DonateCard />
                 </Col>
             </Row>
         </Container>

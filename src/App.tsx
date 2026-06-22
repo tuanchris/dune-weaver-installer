@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Header } from "./components";
 import Page from "./model/Page";
@@ -14,10 +14,8 @@ import Unsupported from "./panels/unsupported/Unsupported";
 
 import MatomoTracker from "./components/matomotracker/MatomoTracker";
 import FluidNCOutlet from "./outlets/FluidNCOutlet";
-import SelectDevicePage from "./pages/selectdevice/SelectDevicePage";
 import Installer from "./pages/fluidnc/installer";
 import Terminal from "./pages/fluidnc/terminal";
-import StackTraceDecoder from "./pages/fluidnc/stacktracedecoder";
 import NotFoundPage from "./pages/notfound/NotFoundPage";
 import { GithubService } from "./services";
 import { ConfigValidation } from "./pages/configvalidation/ConfigValidation";
@@ -32,7 +30,10 @@ const Root = () => {
 
     return (
         <Routes>
-            <Route index element={<SelectDevicePage />} />
+            <Route
+                index
+                element={<Navigate to={Page.FLUIDNC_HOME} replace />}
+            />
             <Route path={Page.FLUIDNC_HOME} element={<FluidNCOutlet />}>
                 <Route index element={<Home />} />
                 <Route
@@ -51,10 +52,6 @@ const Root = () => {
                 />
                 <Route path={Page.FLUIDNC_WIFI} element={<WiFiSettings />} />
                 <Route path={Page.FLUIDNC_CALIBRATE} element={<Calibrate />} />
-                <Route
-                    path={Page.FLUIDNC_STACKTRACE_DECODER}
-                    element={<StackTraceDecoder />}
-                />
             </Route>
             <Route
                 path={Page.FLUIDNC_CONFIG_VALIDATION}

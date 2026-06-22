@@ -156,7 +156,7 @@ const PinField = ({
                             <br />
                             Refer to the{" "}
                             <a
-                                href="http://wiki.fluidnc.com/en/hardware/esp32_pin_reference"
+                                href="https://github.com/tuanchris/dune-weaver-firmware"
                                 target="_blank"
                                 rel="noreferrer"
                             >

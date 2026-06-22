@@ -7,8 +7,7 @@ import {
     faSliders,
     faTerminal,
     faSquarePollHorizontal,
-    faWifi,
-    faBug
+    faWifi
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useState } from "react";
@@ -16,7 +15,6 @@ import { useTranslation } from "react-i18next";
 import { Nav } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ControllerServiceContext } from "../../context/ControllerServiceContext";
-import { CapturedBacktraceContext } from "../../context/CapturedBacktraceContext";
 import LogModal from "../../modals/logmodal/LogModal";
 import "./Navigation.scss";
 import Page from "../../model/Page";
@@ -29,7 +27,6 @@ import useTrackEvent, {
 const Navigation = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const backtraceContext = useContext(CapturedBacktraceContext);
     const { t } = useTranslation();
     const trackEvent = useTrackEvent();
     const [showLogModal, setShowLogModal] = useState<boolean>(false);
@@ -96,23 +93,6 @@ const Navigation = () => {
                         {t("panel.navigation.wifi")}
                     </Nav.Link>
                 )}
-                <Nav.Link
-                    eventKey={Page.FLUIDNC_STACKTRACE_DECODER}
-                    style={
-                        backtraceContext?.backtraceLine
-                            ? {
-                                  fontWeight: "bold",
-                                  backgroundColor:
-                                      "var(--bs-success-bg-subtle)",
-                                  color: "var(--bs-success)",
-                                  transition: "all 0.2s"
-                              }
-                            : undefined
-                    }
-                >
-                    <FontAwesomeIcon icon={faBug as IconDefinition} />{" "}
-                    {t("panel.navigation.stacktrace-decoder")}
-                </Nav.Link>
                 <hr />
                 <Nav.Link onClick={() => setShowLogModal(true)}>
                     <FontAwesomeIcon

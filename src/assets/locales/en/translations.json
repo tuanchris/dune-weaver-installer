@@ -7,10 +7,6 @@
         "documentation": "Documentation"
     },
     "page": {
-        "select-device": {
-            "fluidnc": "Use this option if you want to install, upgrade or configure your Dune Weaver sand table controller.",
-            "continue": "Continue"
-        },
         "connection": {
             "title": "Dune Weaver Installer",
             "description": "This tool will make it easy to install or upgrade the Dune Weaver firmware on your controller. Plug in your controller and press Connect to continue.",

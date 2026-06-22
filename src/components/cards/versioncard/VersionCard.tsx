@@ -20,7 +20,7 @@ const VersionCard = ({ release, isLatest }: Props) => {
         }
     }, [release]);
     return (
-        <Card bg="light" text="dark">
+        <Card>
             <Card.Body>
                 {!release && (
                     <>
@@ -35,7 +35,7 @@ const VersionCard = ({ release, isLatest }: Props) => {
                 {release && isLatest && (
                     <>
                         <Card.Title>{release?.name}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted light">
+                        <Card.Subtitle className="mb-2 text-muted">
                             {releaseDate ?? (
                                 <Placeholder xs={5} animation="glow" />
                             )}

@@ -132,7 +132,7 @@ const Firmware = ({ onInstall, githubService }: Props) => {
     };
 
     // The key is the MCU name returned by esploader.
-    // The value is the corresponding name in FluidNC manifests
+    // The value is the corresponding name in the firmware manifests
     const mcuMap = new Map<string, string>([
         ["ESP32-S3", "esp32s3"],
         ["ESP32", "esp32"]

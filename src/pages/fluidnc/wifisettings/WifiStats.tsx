@@ -12,7 +12,7 @@ type Props = {
 
 const WiFiStats = ({ stats, onRefresh }: Props) => {
     return (
-        <Card bg="light">
+        <Card>
             <CardBody>
                 <Row>
                     <Col>

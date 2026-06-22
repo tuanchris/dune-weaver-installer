@@ -17,7 +17,7 @@ export const CONFIG_BASE_URL =
 
 /**
  * Contract for a github release
- * (https://api.github.com/repos/bdring/FluidNC/releases)
+ * (https://api.github.com/repos/tuanchris/dune-weaver-firmware/releases)
  */
 export type GithubRelease = {
     id: number;
