@@ -19,7 +19,7 @@ const Footer = () => {
             <ul className="list-unstyled d-flex align-items-center mb-0">
                 <li className="me-3">
                     <a
-                        href="https://duneweaver.com"
+                        href="https://duneweaver.com/docs"
                         target="_blank"
                         rel="noreferrer"
                     >

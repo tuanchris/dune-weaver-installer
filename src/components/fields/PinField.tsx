@@ -156,7 +156,7 @@ const PinField = ({
                             <br />
                             Refer to the{" "}
                             <a
-                                href="https://github.com/tuanchris/dune-weaver-firmware"
+                                href="https://duneweaver.com/docs"
                                 target="_blank"
                                 rel="noreferrer"
                             >

@@ -45,7 +45,7 @@ const Header = () => {
 
             <Navbar.Collapse className="justify-content-end">
                 <Nav.Link
-                    href="https://duneweaver.com"
+                    href="https://duneweaver.com/docs"
                     target="_blank"
                     className="nav-link active"
                 >
