@@ -1,0 +1,9 @@
+{
+  "quietDeps": true,
+  "silenceDeprecations": [
+    "import",
+    "global-builtin",
+    "color-functions",
+    "if-function"
+  ]
+}
