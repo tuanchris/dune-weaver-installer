@@ -23,12 +23,13 @@ export const Markdown = ({ children }: Props) => {
             resetKeys={[children]}
             onError={() => {}}
         >
-            <ReactMarkdown
-                className="markdown card-text"
-                remarkPlugins={[remarkGfm]}
-            >
-                {children}
-            </ReactMarkdown>
+            {/* react-markdown v9 removed the `className` prop, so the wrapper
+                div carries the styling classes instead. */}
+            <div className="markdown card-text">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {children}
+                </ReactMarkdown>
+            </div>
         </ErrorBoundary>
     );
 };

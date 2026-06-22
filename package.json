@@ -28,6 +28,9 @@
         "url": "https://github.com/tuanchris/dune-weaver-installer/issues"
     },
     "homepage": "https://github.com/tuanchris/dune-weaver-installer#readme",
+    "@parcel/resolver-default": {
+        "packageExports": true
+    },
     "devDependencies": {
         "@eslint/js": "^9.17.0",
         "@parcel/transformer-sass": "^2.16.4",
@@ -36,7 +39,6 @@
         "@types/node": "^20.2.5",
         "@typescript-eslint/eslint-plugin": "^6.7.5",
         "@typescript-eslint/parser": "^6.7.5",
-        "typescript": ">=5.0.0",
         "babel-jest": "^29.7.0",
         "buffer": "^5.5.0",
         "eslint": "^8.57.1",
@@ -54,6 +56,7 @@
         "react-router-dom": "^6.30.3",
         "svgo": "^3.3.3",
         "ts-jest": "^29.2.5",
+        "typescript": ">=5.0.0",
         "typescript-eslint": "^8.18.1"
     },
     "dependencies": {
@@ -81,8 +84,8 @@
         "react-dom": "^18.2.0",
         "react-error-boundary": "^4.0.10",
         "react-i18next": "^15.4.1",
-        "react-markdown": "^8.0.7",
-        "remark-gfm": "^3.0.1",
+        "react-markdown": "^9.1.0",
+        "remark-gfm": "^4.0.1",
         "zustand": "^5.0.8"
     }
 }
