@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import "./i18n";
-import "flag-icons/css/flag-icons.min.css";
 
 // On GitHub Pages the app is served from a project subpath
 // (https://<user>.github.io/dune-weaver-installer/), so the router needs a
