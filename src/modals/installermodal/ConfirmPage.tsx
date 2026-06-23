@@ -29,7 +29,7 @@ const ConfirmPage = ({
     onInstall,
     onCancel
 }: Props) => {
-    const [baud, setBaud] = useLocalStorage("baud", "921600");
+    const [baud, setBaud] = useLocalStorage("baud", "115200");
     const [files, setFiles] = useState<string[]>([]);
     const { t } = useTranslation();
 
@@ -98,12 +98,7 @@ const ConfirmPage = ({
                 <Col lg={8}>
                     <SelectField
                         label={t("modal.installer.installation-speed")}
-                        options={[
-                            { name: "921600 baud", value: "921600" },
-                            { name: "460800 baud", value: "460800" },
-                            { name: "230400 baud", value: "230400" },
-                            { name: "115200 baud", value: "115200" }
-                        ]}
+                        options={[{ name: "115200 baud", value: "115200" }]}
                         value={baud}
                         setValue={(value) => setBaud(value)}
                         helpText={t("modal.installer.installation-speed-help")}
@@ -115,7 +110,9 @@ const ConfirmPage = ({
                     <FontAwesomeIcon icon={faClose as IconDefinition} />{" "}
                     {t("modal.installer.cancel")}
                 </Button>
-                <Button onClick={() => onInstall(+baud, files)}>
+                <Button
+                    onClick={() => onInstall(Math.min(+baud, 115200), files)}
+                >
                     <FontAwesomeIcon
                         icon={faFire as IconDefinition}
                         style={{ marginRight: "8px" }}
