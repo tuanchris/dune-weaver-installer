@@ -22,9 +22,9 @@
       // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
       // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
       // Otherwise, leave pathSegmentsToKeep as 0.
-      // Project page served from /dune-weaver-installer/ -> keep 1 segment.
-      // Set to 0 if you move to a custom domain / root hosting.
-      var pathSegmentsToKeep = 1;
+      // Served from the root of the custom domain (installer.duneweaver.com)
+      // -> keep 0 segments.
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
       l.replace(
