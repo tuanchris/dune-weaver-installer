@@ -1030,15 +1030,15 @@ const LedStep = ({ state, update, goto, error, setError }: StepProps) => {
         }
     };
 
-    // Light the whole strip solid red so the user can confirm the channel order.
-    const testRed = async () => {
+    // Light the whole strip a solid primary so the user can confirm each
+    // channel maps to the right color (verifies the full color order).
+    const showColor = (hex: string) => async () => {
         setError(undefined);
         setBusy(true);
         try {
             await sendLed("$LED/Brightness=128");
-            await sendLed("$LED/Palette=rainbow");
-            await sendLed("$LED/Color=FF0000");
             await sendLed("$LED/Effect=static");
+            await sendLed("$LED/Color=" + hex);
         } catch (e) {
             setError(e instanceof Error ? e.message : String(e));
         } finally {
@@ -1102,12 +1102,34 @@ const LedStep = ({ state, update, goto, error, setError }: StepProps) => {
                 options={LED_COLOR_ORDERS}
                 value={colorOrder}
                 setValue={setColorOrder}
-                helpText="Channel order of your strip. Use the red test below: if the strip isn't red, pick the order that matches what you see, apply, and test again."
+                helpText="Channel order of your strip. Use the R/G/B tests below: if a color shows wrong (e.g. red looks green), pick the order that matches what you see, apply, and test again."
             />
 
+            <Form.Text className="text-muted d-block mb-2">
+                Test each channel — the strip should show the matching color.
+                Apply the color order first if you change it.
+            </Form.Text>
             <div className="setup-actions mb-3">
-                <Button loading={busy} disabled={busy} onClick={testRed}>
-                    Test — show red
+                <Button
+                    loading={busy}
+                    disabled={busy}
+                    onClick={showColor("FF0000")}
+                >
+                    Test red
+                </Button>
+                <Button
+                    loading={busy}
+                    disabled={busy}
+                    onClick={showColor("00FF00")}
+                >
+                    Test green
+                </Button>
+                <Button
+                    loading={busy}
+                    disabled={busy}
+                    onClick={showColor("0000FF")}
+                >
+                    Test blue
                 </Button>
                 <Button loading={busy} disabled={busy} onClick={applyConfig}>
                     Apply count &amp; color order (restart)
