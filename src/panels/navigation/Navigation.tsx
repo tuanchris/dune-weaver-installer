@@ -7,6 +7,7 @@ import {
     faSliders,
     faTerminal,
     faSquarePollHorizontal,
+    faWandMagicSparkles,
     faWifi
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -68,6 +69,12 @@ const Navigation = () => {
                 <Nav.Link eventKey={Page.FLUIDNC_INSTALLER}>
                     <FontAwesomeIcon icon={faDownload as IconDefinition} />{" "}
                     {t("panel.navigation.install")}
+                </Nav.Link>
+                <Nav.Link eventKey={Page.FLUIDNC_SETUP}>
+                    <FontAwesomeIcon
+                        icon={faWandMagicSparkles as IconDefinition}
+                    />{" "}
+                    {t("panel.navigation.setup")}
                 </Nav.Link>
                 <Nav.Link eventKey={Page.FLUIDNC_TERMINAL}>
                     <FontAwesomeIcon icon={faTerminal as IconDefinition} />{" "}

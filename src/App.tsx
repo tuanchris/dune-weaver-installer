@@ -15,6 +15,7 @@ import Unsupported from "./panels/unsupported/Unsupported";
 import MatomoTracker from "./components/matomotracker/MatomoTracker";
 import FluidNCOutlet from "./outlets/FluidNCOutlet";
 import Installer from "./pages/fluidnc/installer";
+import SetupWizard from "./pages/fluidnc/setup";
 import Terminal from "./pages/fluidnc/terminal";
 import NotFoundPage from "./pages/notfound/NotFoundPage";
 import { GithubService } from "./services";
@@ -41,6 +42,7 @@ const Root = () => {
                         />
                     }
                 />
+                <Route path="setup" element={<SetupWizard />} />
                 <Route path="terminal" element={<Terminal />} />
                 <Route path="files" element={<FileBrowser />} />
                 <Route path="wifi" element={<WiFiSettings />} />

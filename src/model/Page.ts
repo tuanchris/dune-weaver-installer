@@ -6,6 +6,7 @@ export enum Page {
     FLUIDNC_CONFIGURATION = "/configuration",
     FLUIDNC_WIFI = "/wifi",
     FLUIDNC_CALIBRATE = "/calibrate",
+    FLUIDNC_SETUP = "/setup",
     FLUIDNC_CONFIG_VALIDATION = "/config"
 }
 

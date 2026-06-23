@@ -6,6 +6,7 @@ import AlertMessage from "../../../components/alertmessage/AlertMessage";
 import { CalibrateCard } from "../../../components/cards/calibratecard/CalibrateCard";
 import { FileBrowserCard } from "../../../components/cards/filebrowsercard/FileBrowserCard";
 import { InstallCard } from "../../../components/cards/installcard/InstallCard";
+import { SetupCard } from "../../../components/cards/setupcard/SetupCard";
 import { TerminalCard } from "../../../components/cards/terminalcard/TerminalCard";
 import { WiFiCard } from "../../../components/cards/wificard/WiFiCard";
 import LogModal from "../../../modals/logmodal/LogModal";
@@ -49,6 +50,11 @@ const Home = () => {
                     </Col>
                 </Row>
                 <Row>
+                    <Col xs={12} md={6} lg={4}>
+                        <SetupCard
+                            onClick={() => navigate(Page.FLUIDNC_SETUP)}
+                        />
+                    </Col>
                     <Col xs={12} md={6} lg={4}>
                         <InstallCard
                             onClick={() => navigate(Page.FLUIDNC_INSTALLER)}

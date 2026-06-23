@@ -66,7 +66,8 @@
             "calibrate": "Calibrate",
             "stacktrace-decoder": "Decode Stack Trace",
             "restart": "Restart",
-            "disconnect": "Disconnect"
+            "disconnect": "Disconnect",
+            "setup": "First Weave"
         },
         "firmware": {
             "install": "Install",
@@ -160,6 +161,10 @@
         },
         "donate": {
             "description": "Please consider a donation to the Dune Weaver project via the links below to keep it going."
+        },
+        "setup": {
+            "description": "New here? Let the First Weave wizard flash, configure, calibrate and test your table step by step.",
+            "button": "Start First Weave"
         }
     }
 }
